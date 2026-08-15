@@ -3,102 +3,140 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ร้านค้าสุมิตราเฮย์เดย์</title>
+<title>ร้านค้าสุมิตรา Hay Day</title>
 
 <style>
-*{box-sizing:border-box}
-
-body{
-  margin:0;
-  font-family:Arial,"Noto Sans Thai",sans-serif;
-  background:#fff8ed;
-  color:#4b3621;
+* {
+  box-sizing: border-box;
 }
 
-header{
-  background:linear-gradient(135deg,#f6b73c,#f28c28);
-  color:white;
-  text-align:center;
-  padding:35px 15px;
+body {
+  margin: 0;
+  font-family: Arial, "Noto Sans Thai", sans-serif;
+  background: #fff8ed;
+  color: #4b3621;
 }
 
-header h1{
-  margin:0;
-  font-size:32px;
+header {
+  background: linear-gradient(135deg, #f6b73c, #f28c28);
+  color: white;
+  text-align: center;
+  padding: 35px 15px;
 }
 
-header p{
-  margin:10px 0 0;
-  font-size:17px;
+header h1 {
+  margin: 0;
+  font-size: 32px;
 }
 
-.container{
-  max-width:1000px;
-  margin:auto;
-  padding:25px 15px;
+header p {
+  margin: 10px 0 0;
+  font-size: 17px;
 }
 
-.title{
-  text-align:center;
-  margin-bottom:25px;
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 25px 15px;
 }
 
-.products{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:18px;
+.title {
+  text-align: center;
+  margin-bottom: 25px;
 }
 
-.card{
-  background:white;
-  border-radius:18px;
-  padding:20px;
-  text-align:center;
-  box-shadow:0 5px 18px rgba(0,0,0,.08);
+.title h2 {
+  margin-bottom: 8px;
 }
 
-.icon{
-  font-size:55px;
-  margin-bottom:10px;
+.category {
+  background: white;
+  border-radius: 16px;
+  padding: 20px;
+  margin-bottom: 25px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
 
-.card h3{
-  margin:8px 0;
-  font-size:21px;
+.category h2 {
+  margin-top: 0;
+  color: #e57b20;
 }
 
-.price{
-  color:#e87518;
-  font-size:24px;
-  font-weight:bold;
-  margin:12px 0;
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 15px;
 }
 
-.btn{
-  display:inline-block;
-  background:#25a55f;
-  color:white;
-  text-decoration:none;
-  padding:11px 22px;
-  border-radius:25px;
-  font-weight:bold;
+.card {
+  background: #fffdf9;
+  border: 1px solid #f0d7b0;
+  border-radius: 14px;
+  padding: 18px;
+  text-align: center;
 }
 
-.info{
-  margin-top:30px;
-  background:white;
-  padding:25px;
-  border-radius:18px;
-  text-align:center;
-  box-shadow:0 5px 18px rgba(0,0,0,.06);
+.icon {
+  font-size: 42px;
+  margin-bottom: 8px;
 }
 
-footer{
-  margin-top:35px;
-  background:#4b3621;
-  color:white;
-  text-align:center;
-  padding:20px;
+.card h3 {
+  margin: 8px 0;
+}
+
+.price {
+  color: #e56b1f;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 8px 0;
+}
+
+.card p {
+  font-size: 14px;
+  color: #6b5845;
+}
+
+.btn {
+  display: inline-block;
+  background: #25a84a;
+  color: white;
+  text-decoration: none;
+  padding: 10px 18px;
+  border-radius: 25px;
+  margin-top: 8px;
+  font-weight: bold;
+}
+
+.btn:hover {
+  background: #18883a;
+}
+
+.contact {
+  background: #fff;
+  text-align: center;
+  padding: 30px 20px;
+  border-radius: 18px;
+  margin-top: 30px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+footer {
+  background: #5b321e;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 30px;
+}
+
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 26px;
+  }
+
+  .products {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 </style>
 </head>
@@ -106,55 +144,162 @@ footer{
 <body>
 
 <header>
-<h1>🛍️ ร้านค้าสุมิตราเฮย์เดย์</h1>
-<p>บริการดิจิทัล ราคาสบายกระเป๋า 💛</p>
+  <h1>🌾🛒 ร้านค้าสุมิตรา Hay Day</h1>
+  <p>สินค้า Hay Day ราคาสบาย ๆ 💛</p>
 </header>
 
 <div class="container">
 
-<div class="title">
-<h2>✨ สินค้าแนะนำ ✨</h2>
-<p>เลือกสินค้าที่ต้องการได้เลย</p>
-</div>
+  <div class="title">
+    <h2>✨ สินค้า Hay Day ✨</h2>
+    <p>เลือกหมวดสินค้าที่ต้องการได้เลย</p>
+  </div>
 
-<div class="products">
+  <!-- พืชผล -->
+  <section class="category">
+    <h2>🌾 พืชผล</h2>
 
-<div class="card">
-<div class="icon">🤖</div>
-<h3>GPT Go 90 วัน</h3>
-<div class="price">259 บาท</div>
-<p>ใช้งานสำหรับ 1 คน<br>ระยะเวลา 90 วัน</p>
-<a class="btn" href="https://line.me/" target="_blank">สอบถาม / สั่งซื้อ</a>
-</div>
+    <div class="products">
 
-<div class="card">
-<div class="icon">⭐</div>
-<h3>แพ็กเกจใช้งานคนเดียว</h3>
-<div class="price">450 บาท</div>
-<p>เหมาะสำหรับผู้ที่ต้องการใช้งานยาว ๆ</p>
-<a class="btn" href="https://line.me/" target="_blank">สอบถาม / สั่งซื้อ</a>
-</div>
+      <div class="card">
+        <div class="icon">🌾</div>
+        <h3>ข้าวสาลี</h3>
+        <div class="price">สอบถามราคา</div>
+        <p>สินค้าฟาร์มสำหรับใช้งาน</p>
+        <a class="btn" href="https://line.me/" target="_blank">สอบถาม</a>
+      </div>
 
-<div class="card">
-<div class="icon">💎</div>
-<h3>บริการพิเศษ</h3>
-<div class="price">สอบถามราคา</div>
-<p>มีบริการและแพ็กเกจอื่น ๆ</p>
-<a class="btn" href="https://line.me/" target="_blank">ติดต่อร้าน</a>
-</div>
+      <div class="card">
+        <div class="icon">🌽</div>
+        <h3>ข้าวโพด</h3>
+        <div class="price">สอบถามราคา</div>
+        <p>มีสินค้าตามรอบที่ร้านกำหนด</p>
+        <a class="btn" href="https://line.me/" target="_blank">สอบถาม</a>
+      </div>
 
-</div>
+      <div class="card">
+        <div class="icon">🥕</div>
+        <h3>ผักและพืชผล</h3>
+        <div class="price">สอบถามราคา</div>
+        <p>เลือกสินค้าและจำนวนที่ต้องการ</p>
+        <a class="btn" href="https://line.me/" target="_blank">สอบถาม</a>
+      </div>
 
-<div class="info">
-<h2>📩 สนใจสั่งซื้อ</h2>
-<p>ทักแชตเพื่อสอบถามรายละเอียด<br>ทางร้านยินดีให้บริการค่ะ 💕</p>
-<a class="btn" href="https://line.me/" target="_blank">💬 ติดต่อร้าน</a>
-</div>
+    </div>
+  </section>
+
+  <!-- ผลิตภัณฑ์จากฟาร์ม -->
+  <section class="category">
+    <h2>🥛 ผลิตภัณฑ์จากฟาร์ม</h2>
+
+    <div class="products">
+
+      <div class="card">
+        <div class="icon">🥛</div>
+        <h3>นม</h3>
+        <div class="price">สอบถามราคา</div>
+        <p>สินค้าแปรรูปจากฟาร์ม</p>
+        <a class="btn" href="https://line.me/" target="_blank">สั่งซื้อ</a>
+      </div>
+
+      <div class="card">
+        <div class="icon">🥚</div>
+        <h3>ไข่</h3>
+        <div class="price">สอบถามราคา</div>
+        <p>สินค้าสำหรับใช้งานในฟาร์ม</p>
+        <a class="btn" href="https://line.me/" target="_blank">สั่งซื้อ</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- อาหารและของแปรรูป -->
+  <section class="category">
+    <h2>🍞 อาหาร / ของแปรรูป</h2>
+
+    <div class="products">
+
+      <div class="card">
+        <div class="icon">🍞</div>
+        <h3>ขนมปัง</h3>
+        <div class="price">สอบถามราคา</div>
+        <p>สินค้าแปรรูปพร้อมใช้งาน</p>
+        <a class="btn" href="https://line.me/" target="_blank">สั่งซื้อ</a>
+      </div>
+
+      <div class="card">
+        <div class="icon">🍰</div>
+        <h3>ขนมและอาหาร</h3>
+        <div class="price">สอบถามราคา</div>
+        <p>มีรายการสินค้าให้สอบถาม</p>
+        <a class="btn" href="https://line.me/" target="_blank">สั่งซื้อ</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- วัสดุก่อสร้าง -->
+  <section class="category">
+    <h2>🧱 วัสดุก่อสร้าง</h2>
+
+    <div class="products">
+
+      <div class="card">
+        <div class="icon">🧱</div>
+        <h3>วัสดุฟาร์ม</h3>
+        <div class="price">สอบถามราคา</div>
+        <p>สอบถามรายการและจำนวนที่ต้องการ</p>
+        <a class="btn" href="https://line.me/" target="_blank">สอบถาม</a>
+      </div>
+
+      <div class="card">
+        <div class="icon">🔨</div>
+        <h3>อุปกรณ์ก่อสร้าง</h3>
+        <div class="price">สอบถามราคา</div>
+        <p>แจ้งรายการที่ต้องการกับร้าน</p>
+        <a class="btn" href="https://line.me/" target="_blank">สอบถาม</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- สินค้ารับสั่ง -->
+  <section class="category">
+    <h2>🛒 สินค้ารับสั่ง</h2>
+
+    <div class="products">
+
+      <div class="card">
+        <div class="icon">📦</div>
+        <h3>รับสั่งสินค้าตามรายการ</h3>
+        <div class="price">สอบถามราคา</div>
+        <p>ส่งรายการสินค้าและจำนวนที่ต้องการมาได้เลย</p>
+        <a class="btn" href="https://line.me/" target="_blank">สั่งซื้อ</a>
+      </div>
+
+      <div class="card">
+        <div class="icon">💬</div>
+        <h3>สอบถามสินค้า</h3>
+        <div class="price">ติดต่อร้าน</div>
+        <p>สอบถามสินค้า ราคา และรายละเอียดก่อนสั่งซื้อ</p>
+        <a class="btn" href="https://line.me/" target="_blank">ติดต่อร้าน</a>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="contact">
+    <h2>💬 ติดต่อร้าน</h2>
+    <p>สนใจสินค้า Hay Day สอบถามรายละเอียดกับร้านได้เลยค่ะ 💕</p>
+    <a class="btn" href="https://line.me/" target="_blank">
+      💬 ติดต่อร้าน
+    </a>
+  </div>
 
 </div>
 
 <footer>
-© 2026 ร้านค้าสุมิตราเฮย์เดย์
+  © 2026 ร้านค้าสุมิตรา Hay Day
 </footer>
 
 </body>
