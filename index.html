@@ -3,140 +3,173 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ร้านค้าสุมิตรา Hay Day</title>
+<title>ร้านขนมฟาร์มหวานชื่นใจ</title>
 
 <style>
-* {
-  box-sizing: border-box;
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:Arial,"Noto Sans Thai",sans-serif;
+  background:#fff8ed;
+  color:#4b3621;
+}
+header{
+  background:linear-gradient(135deg,#f6b73c,#f28c28);
+  color:white;
+  text-align:center;
+  padding:32px 15px;
+}
+header h1{margin:0;font-size:30px}
+header p{font-size:17px;margin:10px 0 0}
+
+.container{
+  max-width:1100px;
+  margin:auto;
+  padding:22px 15px;
 }
 
-body {
-  margin: 0;
-  font-family: Arial, "Noto Sans Thai", sans-serif;
-  background: #fff8ed;
-  color: #4b3621;
+.notice{
+  background:#fff;
+  border-radius:18px;
+  padding:20px;
+  margin-bottom:20px;
+  box-shadow:0 4px 15px #00000012;
+}
+.notice h2{margin-top:0}
+
+.search{
+  width:100%;
+  padding:14px;
+  border:2px solid #e6d4a8;
+  border-radius:12px;
+  font-size:16px;
+  margin-bottom:20px;
 }
 
-header {
-  background: linear-gradient(135deg, #f6b73c, #f28c28);
-  color: white;
-  text-align: center;
-  padding: 35px 15px;
+.categories{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:15px;
 }
 
-header h1 {
-  margin: 0;
-  font-size: 32px;
+.category{
+  background:white;
+  border:2px solid #e6d4a8;
+  border-radius:18px;
+  padding:20px;
+  cursor:pointer;
+  transition:.2s;
+}
+.category:hover{
+  transform:translateY(-3px);
+  box-shadow:0 5px 15px #0002;
+}
+.category h2{margin:0 0 8px}
+
+.category p{
+  margin:0;
+  color:#777;
 }
 
-header p {
-  margin: 10px 0 0;
-  font-size: 17px;
+.products{
+  margin-top:25px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
+  gap:15px;
 }
 
-.container {
-  max-width: 1100px;
-  margin: auto;
-  padding: 25px 15px;
+.product{
+  background:white;
+  border:2px solid #dcebbd;
+  border-radius:16px;
+  padding:18px;
+  text-align:center;
 }
 
-.title {
-  text-align: center;
-  margin-bottom: 25px;
+.product h3{margin:8px 0}
+.product .price{
+  color:#e36b22;
+  font-weight:bold;
+  font-size:18px;
 }
 
-.title h2 {
-  margin-bottom: 8px;
+.btn{
+  border:0;
+  border-radius:25px;
+  padding:11px 18px;
+  background:#20b957;
+  color:white;
+  font-size:15px;
+  cursor:pointer;
+  margin-top:10px;
 }
 
-.category {
-  background: white;
-  border-radius: 16px;
-  padding: 20px;
-  margin-bottom: 25px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+.btn.orange{background:#ed8b24}
+.btn.dark{background:#4b3621}
+
+.cart{
+  position:fixed;
+  right:18px;
+  bottom:18px;
+  z-index:10;
+  background:#20b957;
+  color:white;
+  border:0;
+  border-radius:50px;
+  padding:15px 22px;
+  font-size:16px;
+  box-shadow:0 4px 15px #0003;
 }
 
-.category h2 {
-  margin-top: 0;
-  color: #e57b20;
+.cart-box{
+  display:none;
+  position:fixed;
+  z-index:20;
+  inset:0;
+  background:#0008;
+  padding:20px;
 }
 
-.products {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 15px;
+.cart-content{
+  background:white;
+  max-width:600px;
+  margin:30px auto;
+  padding:22px;
+  border-radius:20px;
+  max-height:90vh;
+  overflow:auto;
 }
 
-.card {
-  background: #fffdf9;
-  border: 1px solid #f0d7b0;
-  border-radius: 14px;
-  padding: 18px;
-  text-align: center;
+input,textarea,select{
+  width:100%;
+  padding:12px;
+  margin:7px 0 12px;
+  border:1px solid #ccc;
+  border-radius:10px;
+  font-size:15px;
 }
 
-.icon {
-  font-size: 42px;
-  margin-bottom: 8px;
+.order-item{
+  border-bottom:1px solid #eee;
+  padding:10px 0;
 }
 
-.card h3 {
-  margin: 8px 0;
+.small{
+  color:#777;
+  font-size:14px;
 }
 
-.price {
-  color: #e56b1f;
-  font-size: 20px;
-  font-weight: bold;
-  margin: 8px 0;
+footer{
+  margin-top:40px;
+  padding:25px;
+  background:#4b3621;
+  color:white;
+  text-align:center;
 }
 
-.card p {
-  font-size: 14px;
-  color: #6b5845;
-}
-
-.btn {
-  display: inline-block;
-  background: #25a84a;
-  color: white;
-  text-decoration: none;
-  padding: 10px 18px;
-  border-radius: 25px;
-  margin-top: 8px;
-  font-weight: bold;
-}
-
-.btn:hover {
-  background: #18883a;
-}
-
-.contact {
-  background: #fff;
-  text-align: center;
-  padding: 30px 20px;
-  border-radius: 18px;
-  margin-top: 30px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-}
-
-footer {
-  background: #5b321e;
-  color: white;
-  text-align: center;
-  padding: 20px;
-  margin-top: 30px;
-}
-
-@media (max-width: 600px) {
-  header h1 {
-    font-size: 26px;
-  }
-
-  .products {
-    grid-template-columns: 1fr 1fr;
-  }
+@media(max-width:600px){
+  header h1{font-size:25px}
+  .categories{grid-template-columns:1fr}
 }
 </style>
 </head>
@@ -144,163 +177,352 @@ footer {
 <body>
 
 <header>
-  <h1>🌾🛒 ร้านค้าสุมิตรา Hay Day</h1>
-  <p>สินค้า Hay Day ราคาสบาย ๆ 💛</p>
+  <h1>🍬 ร้านขนมฟาร์มหวานชื่นใจ</h1>
+  <p>ขนมทุกเลเวล ราคาต่อชิ้น สั่งง่าย รับไวใน Hay Day</p>
 </header>
 
 <div class="container">
 
-  <div class="title">
-    <h2>✨ สินค้า Hay Day ✨</h2>
-    <p>เลือกหมวดสินค้าที่ต้องการได้เลย</p>
+  <div class="notice">
+    <h2>🛒 วิธีสั่งซื้อ</h2>
+    <p>
+      เลือกขนม → ใส่ตะกร้า → กรอกเลขแท็กฟาร์ม
+      → ยืนยันออเดอร์
+    </p>
+    <p>
+      🎫 ได้เลขออเดอร์ทันที
+      สามารถคัดลอกออเดอร์ส่งแอดมินทาง LINE ได้เลย
+    </p>
   </div>
 
-  <!-- พืชผล -->
-  <section class="category">
-    <h2>🌾 พืชผล</h2>
+  <input
+    id="search"
+    class="search"
+    type="text"
+    placeholder="🔎 ค้นหาสินค้า..."
+    oninput="searchProducts()"
+  >
 
-    <div class="products">
+  <h2>📦 หมวดสินค้า</h2>
 
-      <div class="card">
-        <div class="icon">🌾</div>
-        <h3>ข้าวสาลี</h3>
-        <div class="price">สอบถามราคา</div>
-        <p>สินค้าฟาร์มสำหรับใช้งาน</p>
-        <a class="btn" href="https://line.me/" target="_blank">สอบถาม</a>
-      </div>
+  <div class="categories">
 
-      <div class="card">
-        <div class="icon">🌽</div>
-        <h3>ข้าวโพด</h3>
-        <div class="price">สอบถามราคา</div>
-        <p>มีสินค้าตามรอบที่ร้านกำหนด</p>
-        <a class="btn" href="https://line.me/" target="_blank">สอบถาม</a>
-      </div>
-
-      <div class="card">
-        <div class="icon">🥕</div>
-        <h3>ผักและพืชผล</h3>
-        <div class="price">สอบถามราคา</div>
-        <p>เลือกสินค้าและจำนวนที่ต้องการ</p>
-        <a class="btn" href="https://line.me/" target="_blank">สอบถาม</a>
-      </div>
-
+    <div class="category" onclick="showCategory('sweet')">
+      <h2>🍬 ขนมแสนอร่อย</h2>
+      <p>ขนมทุกเลเวล ราคาต่อชิ้น</p>
     </div>
-  </section>
 
-  <!-- ผลิตภัณฑ์จากฟาร์ม -->
-  <section class="category">
-    <h2>🥛 ผลิตภัณฑ์จากฟาร์ม</h2>
-
-    <div class="products">
-
-      <div class="card">
-        <div class="icon">🥛</div>
-        <h3>นม</h3>
-        <div class="price">สอบถามราคา</div>
-        <p>สินค้าแปรรูปจากฟาร์ม</p>
-        <a class="btn" href="https://line.me/" target="_blank">สั่งซื้อ</a>
-      </div>
-
-      <div class="card">
-        <div class="icon">🥚</div>
-        <h3>ไข่</h3>
-        <div class="price">สอบถามราคา</div>
-        <p>สินค้าสำหรับใช้งานในฟาร์ม</p>
-        <a class="btn" href="https://line.me/" target="_blank">สั่งซื้อ</a>
-      </div>
-
+    <div class="category" onclick="showCategory('material')">
+      <h2>☘️ วัตถุดิบสำหรับคนขี้เกลียด</h2>
+      <p>วัตถุดิบพร้อมสั่ง</p>
     </div>
-  </section>
 
-  <!-- อาหารและของแปรรูป -->
-  <section class="category">
-    <h2>🍞 อาหาร / ของแปรรูป</h2>
-
-    <div class="products">
-
-      <div class="card">
-        <div class="icon">🍞</div>
-        <h3>ขนมปัง</h3>
-        <div class="price">สอบถามราคา</div>
-        <p>สินค้าแปรรูปพร้อมใช้งาน</p>
-        <a class="btn" href="https://line.me/" target="_blank">สั่งซื้อ</a>
-      </div>
-
-      <div class="card">
-        <div class="icon">🍰</div>
-        <h3>ขนมและอาหาร</h3>
-        <div class="price">สอบถามราคา</div>
-        <p>มีรายการสินค้าให้สอบถาม</p>
-        <a class="btn" href="https://line.me/" target="_blank">สั่งซื้อ</a>
-      </div>
-
+    <div class="category" onclick="showCategory('animal')">
+      <h2>🐾 อาหารสัตว์มีครบกินให้อิ่ม</h2>
+      <p>อาหารสัตว์สำหรับฟาร์ม</p>
     </div>
-  </section>
 
-  <!-- วัสดุก่อสร้าง -->
-  <section class="category">
-    <h2>🧱 วัสดุก่อสร้าง</h2>
-
-    <div class="products">
-
-      <div class="card">
-        <div class="icon">🧱</div>
-        <h3>วัสดุฟาร์ม</h3>
-        <div class="price">สอบถามราคา</div>
-        <p>สอบถามรายการและจำนวนที่ต้องการ</p>
-        <a class="btn" href="https://line.me/" target="_blank">สอบถาม</a>
-      </div>
-
-      <div class="card">
-        <div class="icon">🔨</div>
-        <h3>อุปกรณ์ก่อสร้าง</h3>
-        <div class="price">สอบถามราคา</div>
-        <p>แจ้งรายการที่ต้องการกับร้าน</p>
-        <a class="btn" href="https://line.me/" target="_blank">สอบถาม</a>
-      </div>
-
+    <div class="category" onclick="showCategory('fruit')">
+      <h2>🥕 ผัก & ผลไม้ กินเยอะๆจะได้ฉลาด</h2>
+      <p>ผักและผลไม้</p>
     </div>
-  </section>
 
-  <!-- สินค้ารับสั่ง -->
-  <section class="category">
-    <h2>🛒 สินค้ารับสั่ง</h2>
-
-    <div class="products">
-
-      <div class="card">
-        <div class="icon">📦</div>
-        <h3>รับสั่งสินค้าตามรายการ</h3>
-        <div class="price">สอบถามราคา</div>
-        <p>ส่งรายการสินค้าและจำนวนที่ต้องการมาได้เลย</p>
-        <a class="btn" href="https://line.me/" target="_blank">สั่งซื้อ</a>
-      </div>
-
-      <div class="card">
-        <div class="icon">💬</div>
-        <h3>สอบถามสินค้า</h3>
-        <div class="price">ติดต่อร้าน</div>
-        <p>สอบถามสินค้า ราคา และรายละเอียดก่อนสั่งซื้อ</p>
-        <a class="btn" href="https://line.me/" target="_blank">ติดต่อร้าน</a>
-      </div>
-
+    <div class="category" onclick="showCategory('tool')">
+      <h2>🛠️ อุปกรณ์ทำลายล้างสำหรับคนหัวร้อน</h2>
+      <p>อุปกรณ์สำหรับฟาร์ม</p>
     </div>
-  </section>
 
-  <div class="contact">
-    <h2>💬 ติดต่อร้าน</h2>
-    <p>สนใจสินค้า Hay Day สอบถามรายละเอียดกับร้านได้เลยค่ะ 💕</p>
-    <a class="btn" href="https://line.me/" target="_blank">
-      💬 ติดต่อร้าน
-    </a>
+    <div class="category" onclick="showCategory('barn')">
+      <h2>🪵 อัพเดทโรงนา/ยุ้งฉาง แบบคละเท่านั้น</h2>
+      <p>ชุดละ 89 ชิ้น ราคา 10 บาท</p>
+    </div>
+
+  </div>
+
+  <div id="categoryNotice" class="notice" style="display:none"></div>
+
+  <div id="products" class="products"></div>
+
+  <div class="notice">
+    <h2>💬 ติดต่อแอดมิน</h2>
+    <p>สอบถามรายละเอียดหรือแจ้งออเดอร์กับทางร้าน</p>
+    <a
+      class="btn"
+      href="https://lin.ee/sKDHKRw"
+      target="_blank"
+    >💬 ติดต่อร้านผ่าน LINE</a>
+    <p class="small">LINE: @726vpwfk</p>
   </div>
 
 </div>
 
+<button class="cart" onclick="openCart()">
+  🛒 ตะกร้า <span id="cartCount">0</span>
+</button>
+
+<div id="cartBox" class="cart-box">
+  <div class="cart-content">
+
+    <h2>🛒 รายการออเดอร์</h2>
+
+    <div id="cartItems"></div>
+
+    <hr>
+
+    <h3>📋 รายละเอียดออเดอร์</h3>
+
+    <label>🏷️ เลขแท็กฟาร์ม</label>
+    <input
+      id="farmTag"
+      placeholder="เช่น #ABC123"
+    >
+
+    <label>⏰ เวลาที่ต้องการจัดส่ง</label>
+    <input
+      id="deliveryTime"
+      placeholder="เช่น 20:30 น."
+    >
+
+    <label>📝 หมายเหตุเพิ่มเติม</label>
+    <textarea
+      id="orderNote"
+      rows="4"
+      placeholder="รายละเอียดเพิ่มเติม..."
+    ></textarea>
+
+    <div class="notice">
+      <b>📌 หมายเหตุการสั่งซื้อ</b>
+      <p>ใส่ # ก่อนส่งออเดอร์</p>
+      <p>ควรเคลียร์พื้นที่เรียบร้อย</p>
+      <p>แจ้งเวลาจัดส่ง ทางร้านจะไปตามเวลาที่นัด</p>
+      <p>❌ ทุกออเดอร์ไม่รับฝาก สามารถรับหลายแท็กได้</p>
+    </div>
+
+    <button class="btn" onclick="confirmOrder()">
+      ✅ ยืนยันออเดอร์
+    </button>
+
+    <button class="btn dark" onclick="closeCart()">
+      ปิด
+    </button>
+
+  </div>
+</div>
+
 <footer>
-  © 2026 ร้านค้าสุมิตรา Hay Day
+  🍬 ร้านขนมฟาร์มหวานชื่นใจ<br>
+  💬 LINE: @726vpwfk
 </footer>
+
+<script>
+
+const products = [
+
+  /*
+   * จะใส่ข้อมูลสินค้าจริงทุกเลเวลตรงนี้ในขั้นต่อไป
+   * ยังไม่ใส่ข้อมูลมั่ว เพื่อไม่ให้ชื่อสินค้าและราคาเลเวลผิด
+   */
+
+];
+
+let cart = [];
+
+function showCategory(category){
+
+  const box = document.getElementById("categoryNotice");
+  box.style.display = "block";
+
+  if(category === "barn"){
+    box.innerHTML = `
+      <h2>🪵 อัพเดทโรงนา/ยุ้งฉาง แบบคละเท่านั้น</h2>
+      <p>🛑 <b>หมายเหตุ: กดถาด 9 ชิ้นก่อน</b></p>
+      <p>💰 ราคา <b>10 บาท / ชุด</b></p>
+      <p>📦 1 ชุด = <b>89 ชิ้น</b></p>
+      <p>❌ ทุกออเดอร์ไม่รับฝาก สามารถรับหลายแท็กได้</p>
+    `;
+  }else{
+    box.innerHTML = `
+      <h2>📦 สินค้าในหมวดนี้</h2>
+      <p>เลือกสินค้าที่ต้องการแล้วเพิ่มลงตะกร้า</p>
+    `;
+  }
+
+  const list = products.filter(p => p.category === category);
+  renderProducts(list);
+}
+
+function renderProducts(list){
+
+  const area = document.getElementById("products");
+
+  if(list.length === 0){
+    area.innerHTML = `
+      <div class="notice">
+        <h3>📦 ยังไม่มีรายการสินค้าในหมวดนี้</h3>
+        <p>ข้อมูลสินค้าและสต็อกจะเพิ่มในขั้นตอนจัดการสินค้า</p>
+      </div>
+    `;
+    return;
+  }
+
+  area.innerHTML = list.map((p,index)=>`
+    <div class="product">
+      <div style="font-size:45px">${p.icon || "🍬"}</div>
+      <h3>${p.name}</h3>
+      <p>LV ${p.level || "-"}</p>
+      <div class="price">${p.price} บาท</div>
+      <p>📦 สต็อก ${p.stock}</p>
+      <button class="btn" onclick="addToCart(${index})">
+        🛒 เพิ่มลงตะกร้า
+      </button>
+    </div>
+  `).join("");
+}
+
+function addToCart(index){
+
+  const product = products[index];
+
+  const found = cart.find(x => x.name === product.name);
+
+  if(found){
+    found.qty++;
+  }else{
+    cart.push({
+      name:product.name,
+      price:product.price,
+      qty:1
+    });
+  }
+
+  updateCart();
+}
+
+function updateCart(){
+
+  document.getElementById("cartCount").textContent =
+    cart.reduce((sum,item)=>sum+item.qty,0);
+
+  const area = document.getElementById("cartItems");
+
+  if(cart.length === 0){
+    area.innerHTML = "<p>ยังไม่มีสินค้าในตะกร้า</p>";
+    return;
+  }
+
+  area.innerHTML = cart.map((item,i)=>`
+    <div class="order-item">
+      <b>${item.name}</b><br>
+      ${item.price} บาท × ${item.qty}
+      <br>
+      <button class="btn orange" onclick="removeItem(${i})">
+        ลบ
+      </button>
+    </div>
+  `).join("");
+}
+
+function removeItem(index){
+  cart.splice(index,1);
+  updateCart();
+}
+
+function openCart(){
+  document.getElementById("cartBox").style.display="block";
+  updateCart();
+}
+
+function closeCart(){
+  document.getElementById("cartBox").style.display="none";
+}
+
+function confirmOrder(){
+
+  if(cart.length === 0){
+    alert("กรุณาเลือกสินค้าก่อนค่ะ");
+    return;
+  }
+
+  let tag = document.getElementById("farmTag").value.trim();
+
+  if(!tag){
+    alert("กรุณากรอก #แท็กฟาร์ม");
+    return;
+  }
+
+  if(!tag.startsWith("#")){
+    tag = "#" + tag;
+  }
+
+  const time =
+    document.getElementById("deliveryTime").value.trim();
+
+  const note =
+    document.getElementById("orderNote").value.trim();
+
+  const orderNumber =
+    "HD" + Date.now().toString().slice(-8);
+
+  let text =
+`🧾 ออเดอร์ร้านขนมฟาร์มหวานชื่นใจ
+เลขออเดอร์: ${orderNumber}
+
+🏷️ แท็กฟาร์ม: ${tag}
+
+📦 รายการสินค้า:
+`;
+
+  cart.forEach(item=>{
+    text +=
+`- ${item.name} × ${item.qty} = ${item.price * item.qty} บาท
+`;
+  });
+
+  text += `
+⏰ เวลาจัดส่ง: ${time || "ไม่ได้ระบุ"}
+
+📝 หมายเหตุ:
+${note || "-"}
+
+📌 ควรเคลียร์พื้นที่เรียบร้อย
+❌ ทุกออเดอร์ไม่รับฝาก
+`;
+
+  navigator.clipboard.writeText(text)
+    .then(()=>{
+      alert(
+        "สร้างเลขออเดอร์แล้วค่ะ\n\n" +
+        "เลขออเดอร์: " + orderNumber +
+        "\n\nคัดลอกออเดอร์แล้ว สามารถส่งให้แอดมินทาง LINE ได้เลย"
+      );
+
+      window.open(
+        "https://lin.ee/sKDHKRw",
+        "_blank"
+      );
+    })
+    .catch(()=>{
+      alert(
+        "เลขออเดอร์: " + orderNumber +
+        "\n\nกรุณาคัดลอกข้อความออเดอร์ส่งให้แอดมินทาง LINE"
+      );
+    });
+}
+
+function searchProducts(){
+
+  const keyword =
+    document.getElementById("search").value.toLowerCase();
+
+  const list = products.filter(p =>
+    p.name.toLowerCase().includes(keyword) ||
+    String(p.level).includes(keyword)
+  );
+
+  renderProducts(list);
+}
+
+</script>
 
 </body>
 </html>
